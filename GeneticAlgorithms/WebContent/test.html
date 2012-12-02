@@ -1,0 +1,37 @@
+<html>
+ <head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>
+Graphs</title>
+
+<!--[if IE]>
+<script language='javascript' type='text/javascript' src='/GeneticAlgorithms/flot/excanvas.min.js'></script><![endif]-->
+<script language='javascript' type='text/javascript' src='/GeneticAlgorithms/flot/jquery.js'>
+</script>
+<script language='javascript' type='text/javascript' src='/GeneticAlgorithms/flot/jquery.flot.js'></script>
+ </head>
+<body id='main_body'>
+<h1><a>Graphs</a></h1>
+
+<h2><u>Distribution of Cross over count and Mutation count over the generations</u></h2>
+<div id='placeholder' style='width:800px;height:600px'></div>
+<script id='source' language='javascript' type='text/javascript'>
+$(function () {
+	var d1 = [[1,17], [2,18], [3,22], [4,8], [5,12], [6,6], [7,14], ];
+	var d2 = [[1,1], [2,8], [3,32], [4,78], [5,2], [6,6], [7,4], ];
+	
+	$.plot($("#placeholder"), [
+	                           {
+	                               data: d1, label: "Cross over count",
+	                               //lines: { show: true, fill: false }
+                               	   lines: {show:true}
+	                           },
+	                           {
+		                           data: d2, label: "Mutation count",
+		                           lines: {show: true}
+	                           }	
+	                           ]);
+	                           
+});
+</script>
+</h1><a href="index.jsp">Home</a></body></html>
